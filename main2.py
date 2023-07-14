@@ -1,3 +1,4 @@
+#PROGRAMA ORIGINAL
 import api
 import requests
 import ids
@@ -20,6 +21,7 @@ def progLineal():
     
 progLineal()
 
+#BUSCANDO LA OPTIMIZACION A TRAVES DE TREADING
 # import api
 # import requests
 # import ids
@@ -43,6 +45,7 @@ progLineal()
 
 # print(f"Tiempo de duración: {tiempoTotal} segundos")
 
+#BUSCANDO LA OPTIMIZACION A TRAVES DE MULTIPROCESSING
 # import api
 # import requests
 # import ids
