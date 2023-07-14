@@ -1,0 +1,31 @@
+l modulo cProfile, me dio este resultado: 150    0.002    0.000   25.065    0.167 api.py:4(getOneUser) explicame que significa cada columna y como llego a este resultado
+ChatGPT
+
+El resultado generado por el módulo cProfile muestra información detallada sobre el tiempo de ejecución de cada función en tu programa. Cada columna en el resultado tiene un significado específico. A continuación, se explica el significado de cada columna:
+
+    ncalls: Indica el número de llamadas realizadas a la función.
+    tottime: Es el tiempo total de ejecución en segundos que se gastó en la función, excluyendo el tiempo de ejecución de las funciones llamadas por ella.
+    percall: Es el tiempo promedio por llamada a la función (tottime dividido por ncalls).
+    cumtime: Es el tiempo total de ejecución en segundos que se gastó en la función, incluyendo el tiempo de ejecución de las funciones llamadas por ella.
+    percall: Es el tiempo promedio por llamada a la función (cumtime dividido por ncalls).
+    filename:lineno(function): Indica la ubicación del código fuente de la función.
+
+En tu caso específico, el resultado que proporcionas es para la función getOneUser en el archivo api.py en la línea 4. Según el resultado, se realizó un total de 150 llamadas a la función. El tiempo total de ejecución fue de 0.002 segundos (tottime), con un tiempo promedio por llamada de 0.000 segundos (percall). El tiempo total de ejecución, incluyendo las funciones llamadas por getOneUser, fue de 25.065 segundos (cumtime), con un tiempo promedio por llamada de 0.167 segundos (percall).
+
+Ten en cuenta que tottime se refiere al tiempo pasado en la propia función getOneUser, mientras que cumtime también incluye el tiempo de ejecución de otras funciones llamadas por getOneUser.
+
+Utilizando esta información, puedes identificar qué funciones están consumiendo más tiempo de ejecución y podrías considerar optimizarlas si es necesario.
+
+Recuerda que el resultado de cProfile proporciona más información detallada para todas las funciones ejecutadas en tu programa. Puedes revisar el resultado completo para obtener una visión más amplia del rendimiento y la optimización de tu programa.
+
+
+
+con el pstats se identifican el tiempo de entrada y salida
+
+  ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+
+    150    0.003    0.000   24.999    0.167 /home/jean/.local/lib/python3.10/site-packages/requests/sessions.py:500(request)
+      150    0.000    0.000    0.005    0.000 /home/jean/.local/lib/python3.10/site-packages/requests/sessions.py:723(<listcomp>)
+      150    0.006    0.000   24.635    0.164 /home/jean/.local/lib/python3.10/site-packages/requests/sessions.py:671(send)
+
+
