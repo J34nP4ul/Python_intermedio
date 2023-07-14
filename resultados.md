@@ -1,4 +1,4 @@
-# Resultados de optimisacion de rendimiento
+# Resultados de optimizacion del rendimiento
 A traves de procesos de ensayo y error hemos determinado los diferentes errores en el codigo.
 Consideramos que el programa main2 descrito en esta carpeta esta siendo afectada por los procesos propios del CPU basado en los siguientes datos:
 1. utilizando la herramienta Htop del sistema operativo Linux podemos determinar que el porcentaje de uso del CPU sin ejecutar el programa. el mismo es del 6.6%
