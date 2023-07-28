@@ -28,4 +28,5 @@ con el pstats se identifican el tiempo de entrada y salida
       150    0.000    0.000    0.005    0.000 /home/jean/.local/lib/python3.10/site-packages/requests/sessions.py:723(<listcomp>)
       150    0.006    0.000   24.635    0.164 /home/jean/.local/lib/python3.10/site-packages/requests/sessions.py:671(send)
 
+a traves de la herramienta top en la terminal de linux, se puede ver un cambio significativo en el uso del cpu% que va de forma inicial 8% hasta 29% mientras corre el programa.
 
